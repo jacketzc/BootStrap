@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+	<link rel="stylesheet" type="text/css" href="css/index.css"/>
+    <title>下拉菜单</title>
+	<style type="text/css">
+		.row:first-child{
+			margin-top: 150px;
+		}
+	</style>
+  </head>
+  <body>
+    <div class="container">
+		<div class="row">
+			<!-- 
+				下拉菜单由按钮和菜单栏（dropdown-menu）组成
+				上面两种组件被包裹在一个dropdown中（如果想创建向上弹出的菜单，可以使用dropup属性）
+				如需将菜单右对齐，请使用 .dropdown-menu-right 类			
+			 -->
+			<div class="dropdown col-sm-3">
+			  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+			    Dropdown
+			    <span class="caret"></span>
+			  </button>
+			  <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu1">
+			    <li><a href="#">Action</a></li>
+			    <li><a href="#">Another action</a></li>
+			    <li><a href="#">Something else here</a></li>
+			  </ul>
+			  <button type="button"  class="btn btn-primary" data-dismiss="dropdown" data-target="#dropdownMenu1">关闭</button>
+			</div>
+			<script type="text/javascript">
+				function show(){
+					$(document).off('.dropdown');
+				}
+			</script>
+			<div class="dropup col-sm-3">
+			  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+			    Dropdown
+			    <span class="caret"></span>
+			  </button>
+			  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+			    <li><a href="#">Action</a></li>
+			    <li><a href="#">Another action</a></li>
+			    <li><a href="#">Something else here</a></li>
+			  </ul>
+			</div>
+		</div>
+		<hr >
+		<!-- 下拉菜单可以添加标题作提示信息 -->
+		<div class="row">
+			<div class="dropdown col-sm-3">
+			  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+			    Dropdown
+			    <span class="caret"></span>
+			  </button>
+			  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+				<li class="dropdown-header">dropdown</li>
+			    <li><a href="#">Action</a></li>
+			    <li><a href="#">Another action</a></li>
+			    <li><a href="#">Something else here</a></li>
+			  </ul>
+			</div>
+		</div>
+		<hr >
+		<!-- 下拉菜单可以添加分割线为按钮分组 -->
+		<div class="row">
+			<div class="dropdown col-sm-3">
+			  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+			    Dropdown
+			    <span class="caret"></span>
+			  </button>
+			  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+			    <li><a href="#">Action</a></li>
+			    <li><a href="#">Another action</a></li>
+			    <li><a href="#">Something else here</a></li>
+			    <li role="separator" class="divider"></li>
+			    <li><a href="#">Separated link</a></li>
+			  </ul>
+			</div>
+		</div>
+		<hr >
+		<!-- 为菜单中的li添加disabled属性，从而禁用该选项 -->
+		<div class="row">
+			<div class="dropdown col-sm-3">
+			  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+			    Dropdown
+			    <span class="caret"></span>
+			  </button>
+			  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+			    <li><a href="#">Action</a></li>
+			    <li class="disabled"><a href="#">Another action</a></li>
+			    <li><a href="#">Something else here</a></li>
+			    <li role="separator" class="divider"></li>
+			    <li><a href="#">Separated link</a></li>
+			  </ul>
+			</div>
+		</div>
+		<hr >
+	</div>
+	
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="js/jquery_1.11.1.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
+  </body>
+</html>

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>hello world</title>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+		<style type="text/css">
+			.row {
+				margin-top: 50px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<!-- 
+		通过在文本输入框 <input> 前面、后面或是两边加上文字或按钮，可以实现对表单控件的扩展
+		为input-group赋予input-group-addon或input-group-btn类，可以给form-control的前面或后面添加额外的元素
+		注意事项：
+		1.只支持文本输入框 <input>（避免使用select和textarea）
+		2.输入框组中的工具提示和弹出框需要特别的设置
+		3.不要和栅格系统混用（应当嵌套在栅格中）
+		4.强烈建议为每个input都添加一个label（不想看见可以设置sr-only）
+	 -->
+		<div class="container">
+			<div class="row">
+				<h3>基本实例：</h3>
+				<div class="col-sm-8">
+					<div class="input-group">
+						<span class="input-group-addon" id="basic-addon1">@</span>
+						<input type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1">
+					</div>
+					<br>
+					<div class="input-group">
+						<input type="text" class="form-control" placeholder="Recipient's username" aria-describedby="basic-addon2">
+						<span class="input-group-addon" id="basic-addon2">@example.com</span>
+					</div>
+					<br>
+					<div class="input-group">
+						<span class="input-group-addon">$</span>
+						<input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+						<span class="input-group-addon">.00</span>
+					</div>
+					<br>
+					<label for="basic-url">Your vanity URL</label>
+					<div class="input-group">
+						<span class="input-group-addon" id="basic-addon3">https://example.com/users/</span>
+						<input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+					</div>
+				</div>
+			</div>
+			<hr>
+			<!-- 
+			为 .input-group 添加相应的尺寸类，其内部包含的元素将自动调整自身的尺寸
+		 -->
+			<div class="row">
+				<h3>尺寸</h3>
+				<div class="col-sm-8">
+					<div class="input-group input-group-lg">
+						<span class="input-group-addon" id="sizing-addon1">@</span>
+						<input type="text" class="form-control" placeholder="Username" aria-describedby="sizing-addon1">
+					</div>
+					<br>
+					<div class="input-group">
+						<span class="input-group-addon" id="sizing-addon2">@</span>
+						<input type="text" class="form-control" placeholder="Username" aria-describedby="sizing-addon2">
+					</div>
+					<br>
+					<div class="input-group input-group-sm">
+						<span class="input-group-addon" id="sizing-addon3">@</span>
+						<input type="text" class="form-control" placeholder="Username" aria-describedby="sizing-addon3">
+					</div>
+				</div>
+			</div>
+			<hr>
+			<!-- 
+				这里的单选框被包裹在一个span中
+			 -->
+			<div class="row">
+				<h3>作为额外元素的单选以及多选框</h3>
+				<div class="col-sm-6">
+					<div class="input-group">
+						<span class="input-group-addon">
+							<input type="checkbox" aria-label="...">
+						</span>
+						<input type="text" class="form-control" aria-label="...">
+					</div>
+					<br>
+					<div class="input-group">
+						<span class="input-group-addon">
+							<input type="radio" aria-label="...">
+						</span>
+						<input type="text" class="form-control" aria-label="...">
+					</div>
+				</div>
+			</div>
+			<hr>
+			<!-- 
+				不是 .input-group-addon，而是添加 .input-group-btn 来包裹按钮元素
+				（由于不同浏览器的默认样式无法被统一的重新赋值，所以才需要这样做）
+			 -->
+			<div class="row">
+				<h3>作为额外元素的按钮</h3>
+				<div class="col-sm-6">
+					<div class="input-group">
+						<span class="input-group-btn">
+							<button class="btn btn-default" type="button">Go!</button>
+						</span>
+						<input type="text" class="form-control" placeholder="Search for...">
+					</div>
+					<br>
+					<div class="input-group">
+						<input type="text" class="form-control" placeholder="Search for...">
+						<span class="input-group-btn">
+							<button class="btn btn-default" type="button">Go!</button>
+						</span>
+					</div>
+				</div>
+			</div>
+			<hr>
+			<div class="row">
+				<h3>作为额外元素的按钮式下拉菜单</h3>
+				<div class="col-sm-4">
+					<div class="input-group">
+						<div class="input-group-btn">
+							<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+							 aria-expanded="false">Action <span class="caret"></span></button>
+							<ul class="dropdown-menu">
+								<li><a href="#">Action</a></li>
+								<li><a href="#">Another action</a></li>
+								<li><a href="#">Something else here</a></li>
+								<li role="separator" class="divider"></li>
+								<li><a href="#">Separated link</a></li>
+							</ul>
+						</div><!-- /btn-group -->
+						<input type="text" class="form-control" aria-label="...">
+					</div>
+					<br>
+					<div class="input-group">
+						<input type="text" class="form-control" aria-label="...">
+						<div class="input-group-btn">
+							<button type="button" class="btn btn-default">Action</button>
+							<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+							 aria-expanded="false"><span class="caret"></span></button>
+							<ul class="dropdown-menu dropdown-menu-right">
+								<li><a href="#">Action</a></li>
+								<li><a href="#">Another action</a></li>
+								<li><a href="#">Something else here</a></li>
+								<li role="separator" class="divider"></li>
+								<li><a href="#">Separated link</a></li>
+							</ul>
+						</div><!-- /btn-group -->
+					</div>
+				</div>
+			</div>
+		
+			<hr>
+
+		</div>
+
+		<script src="js/jquery_1.11.1.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>

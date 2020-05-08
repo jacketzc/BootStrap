@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+	<link rel="stylesheet" type="text/css" href="css/index.css"/>
+    <title>Hello, world!</title>
+	<style type="text/css">
+		.row:first-child{
+			margin-top: 50px;
+		}
+	</style>
+  </head>
+  <body>
+    <div class="container">
+		<!-- 
+			使得按钮有类似的开关效果
+			需要指定按钮属性data-toggle="button"
+			//指定autocomplete="off"（表单自动填写）属性解决火狐浏览器的bug
+		 -->
+		<div class="row">
+			<h3>切换按钮</h3>
+			<div class="col-sm-3">
+				<button type="button" class="btn btn-default" data-toggle="button" aria-pressed="false" autocomplete="off">
+				  Single toggle
+				</button>
+			</div>
+		</div>
+		<hr>
+		<!-- 
+			包裹多选框的label直接可以应用按钮样式
+		 -->
+		<div class="row">
+			<h3>按钮样式的多选控件</h3>
+			<div class="col-sm-6">
+				<div class="btn-group" data-toggle="buttons">
+					<label class="btn btn-success active">
+						<input type="checkbox" autocomplete="off" checked="checked" />checkbox1
+					</label>
+					<label class="btn btn-success ">
+						<input type="checkbox" autocomplete="off"  />checkbox2
+					</label>
+					<label class="btn btn-success ">
+						<input type="checkbox" autocomplete="off" />checkbox3
+					</label>
+				</div>
+			</div>
+		</div>
+		<hr>
+		<div class="row">
+			<h3>单选控件</h3>
+			<div class="col-sm-6">
+				<div class="btn-group" data-toggle="buttons">
+				  <label class="btn btn-primary active">
+				    <input type="radio" name="options" id="option1" autocomplete="off" checked> Radio 1 (preselected)
+				  </label>
+				  <label class="btn btn-primary">
+				    <input type="radio" name="options" id="option2" autocomplete="off"> Radio 2
+				  </label>
+				  <label class="btn btn-primary">
+				    <input type="radio" name="options" id="option3" autocomplete="off"> Radio 3
+				  </label>
+				</div>
+			</div>
+		</div>
+		<hr>
+	</div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="js/jquery_1.11.1.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
+  </body>
+</html>

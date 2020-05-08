@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+	<link rel="stylesheet" type="text/css" href="css/index.css"/>
+    <title>Hello, world!</title>
+  </head>
+  <body>
+    <div class="container">
+		<hr >
+		<div class="row">
+			<div class="col-sm-2  text-right">
+				<span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+				<span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+				<span class="glyphicon glyphicon-align-left" aria-hidden="true"></span>
+			</div>
+			<div class="col-sm-10">
+				<pre class="pre-scrollable">
+css的图标需要配合一个span标签使用
+1.该标签内不能有任何的文字				
+2.需要的类往往有两个，前者表示使用这种样式，后者表示具体的样式				
+3.为了避免给屏幕辅助工具带来干扰，建议使用aria-hidden属性来隐藏辅助工具的识别				
+4.Bootstrap 假定所有的图标字体文件全部位于 ../fonts/ 目录内								
+				</pre>
+			</div>	
+		</div>
+		<hr >
+		<!-- 可以把这些图标应用到按钮、导航、输入框 -->
+		<div class="row">
+			<button type="button" class="btn btn-default" aria-label="Left Align">
+			  <span class="glyphicon glyphicon-align-left" aria-hidden="true"></span>
+			</button>
+			
+			<button type="button" class="btn btn-default btn-lg">
+			  <span class="glyphicon glyphicon-star" aria-hidden="true"></span> Star
+			</button>
+		</div>
+		<hr >
+		<!-- 通过添加sr-only的文本让辅助程序准确识别 -->
+		<div class="row">
+			<div class="alert alert-danger" role="alert">
+			  <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+			  <span class="sr-only">Error:</span>
+			  Enter a valid email address
+			</div>
+		</div>
+	</div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="js/jquery_1.11.1.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
+  </body>
+</html>

@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+	<link rel="stylesheet" type="text/css" href="css/index.css"/>
+    <title>Hello, world!</title>
+	<style type="text/css">
+		.row:first-child{
+			margin-top: 50px;
+		}
+	</style>
+  </head>
+  <body>
+    <div class="container">
+		<!-- 
+			用在应用或搜索结果中超级棒
+		 -->
+		<div class="row">
+			<h3>默认分页</h3>
+			<div class="col-sm-6">
+				<nav aria-label="Page navigation">
+				  <ul class="pagination">
+				    <li>
+				      <a href="#" aria-label="Previous">
+				        <span aria-hidden="true">&laquo;</span>
+				      </a>
+				    </li>
+				    <li><a href="#">1</a></li>
+				    <li><a href="#">2</a></li>
+				    <li><a href="#">3</a></li>
+				    <li><a href="#">4</a></li>
+				    <li><a href="#">5</a></li>
+				    <li>
+				      <a href="#" aria-label="Next">
+				        <span aria-hidden="true">&raquo;</span>
+				      </a>
+				    </li>
+				  </ul>
+				</nav>
+			</div>
+		</div>
+		<hr>
+		<!-- 
+			链接在不同情况下可以定制。你可以给不能点击的链接添加 .disabled 类、给当前页添加 .active 类
+			建议将 active 或 disabled 状态的链接（即 <a> 标签）替换为 <span> 标签
+			这样就可以让其保持需要的样式而不能被点击
+			（禁用只是一种样式，它不能真的禁用）
+		 -->
+		<div class="row">
+			<h3>禁用和激活状态</h3>
+			<div class="col-sm-6">
+				<nav aria-label="Page navigation">
+				  <ul class="pagination">
+				    <li class="disabled">
+				      <a href="#" aria-label="Previous">
+				        <span aria-hidden="true">&laquo;</span>
+				      </a>
+				    </li>
+				    <li><a href="#">1</a></li>
+				    <li class="active"><a href="#">2</a></li>
+				    <li><a href="#">3</a></li>
+				    <li><a href="#">4</a></li>
+				    <li><a href="#">5</a></li>
+				    <li>
+				      <a href="#" aria-label="Next">
+				        <span aria-hidden="true">&raquo;</span>
+				      </a>
+				    </li>
+				  </ul>
+				</nav>
+			</div>
+		</div>
+		<hr >
+		<div class="row">
+			<h3>尺寸</h3>
+			<div class="col-sm-6">
+				<nav aria-label="Page navigation">
+				  <ul class="pagination pagination-sm">
+				    <li>
+				      <a href="#" aria-label="Previous">
+				        <span aria-hidden="true">&laquo;</span>
+				      </a>
+				    </li>
+				    <li><a href="#">1</a></li>
+				    <li><a href="#">2</a></li>
+				    <li><a href="#">3</a></li>
+				    <li><a href="#">4</a></li>
+				    <li><a href="#">5</a></li>
+				    <li>
+				      <a href="#" aria-label="Next">
+				        <span aria-hidden="true">&raquo;</span>
+				      </a>
+				    </li>
+				  </ul>
+				</nav>
+				
+				<nav aria-label="Page navigation">
+				  <ul class="pagination">
+				    <li>
+				      <a href="#" aria-label="Previous">
+				        <span aria-hidden="true">&laquo;</span>
+				      </a>
+				    </li>
+				    <li><a href="#">1</a></li>
+				    <li><a href="#">2</a></li>
+				    <li><a href="#">3</a></li>
+				    <li><a href="#">4</a></li>
+				    <li><a href="#">5</a></li>
+				    <li>
+				      <a href="#" aria-label="Next">
+				        <span aria-hidden="true">&raquo;</span>
+				      </a>
+				    </li>
+				  </ul>
+				</nav>
+				
+				<nav aria-label="Page navigation">
+				  <ul class="pagination pagination-lg">
+				    <li>
+				      <a href="#" aria-label="Previous">
+				        <span aria-hidden="true">&laquo;</span>
+				      </a>
+				    </li>
+				    <li><a href="#">1</a></li>
+				    <li><a href="#">2</a></li>
+				    <li><a href="#">3</a></li>
+				    <li><a href="#">4</a></li>
+				    <li><a href="#">5</a></li>
+				    <li>
+				      <a href="#" aria-label="Next">
+				        <span aria-hidden="true">&raquo;</span>
+				      </a>
+				    </li>
+				  </ul>
+				</nav>
+			</div>
+		</div>
+		<hr >
+		<!-- 
+			用简单的标记和样式，就能做个上一页和下一页的简单翻页
+		 -->
+		<div class="row">
+			<h3>翻页组件（默认样式）</h3>
+			
+			<div class="col-sm-6">
+				<nav aria-label="...">
+				  <ul class="pager">
+				    <li><a href="#">Previous</a></li>
+				    <li><a href="#">Next</a></li>
+				  </ul>
+				</nav>
+			</div>
+		</div>
+		<hr >
+		<div class="row">
+			<h3>翻页组件（两端对齐样式）</h3>
+			<div class="col-sm-6">
+				<nav aria-label="...">
+				  <ul class="pager">
+				    <li class="previous"><a href="#"><span aria-hidden="true">&larr;</span> Older</a></li>
+				    <li class="next"><a href="#">Newer <span aria-hidden="true">&rarr;</span></a></li>
+				  </ul>
+				</nav>
+			</div>
+		</div>
+		<div class="row">
+			<h3>翻页组件（禁用样式）</h3>
+			<div class="col-sm-6">
+				<nav aria-label="...">
+				  <ul class="pager">
+				    <li class="previous disabled"><a href="#"><span aria-hidden="true">&larr;</span> Older</a></li>
+				    <li class="next"><a href="#">Newer <span aria-hidden="true">&rarr;</span></a></li>
+				  </ul>
+				</nav>
+			</div>
+		</div>
+	</div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="js/jquery_1.11.1.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
+  </body>
+</html>

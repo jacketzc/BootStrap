@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+	<link rel="stylesheet" type="text/css" href="css/index.css"/>
+    <title>Hello, world!</title>
+	<style type="text/css">
+		.row:first-child{
+			margin-top: 50px;
+		}
+	</style>
+  </head>
+  <body>
+	<!-- 
+		这里的下拉框主要讲述下拉框的实现js
+		要领：
+		1.控制开关内置于目标控件（下拉框）中，需要指定属性data-toggle="dropdown"（目标控件的类别）
+		2.目标控件分为两层
+			外层：class="dropdown"
+			内层分为两部分
+				一个是控制开关
+				另一个是下拉框的列表：class="dropdown-menu"
+	 -->
+    <div class="container">
+		<div class="row">
+			<h3>通过data属性</h3>
+			<div class="col-sm-3">
+				<div class="dropdown">
+				  <button id="dLabel" class="btn btn-default" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				    按钮式
+				    <span class="caret"></span>
+				  </button>
+				  <ul class="dropdown-menu" aria-labelledby="dLabel">
+				    ...
+				  </ul>
+				</div>
+			</div>
+			<!-- 保持链接的完整性，使用data-target代替href -->
+			<div class="col-sm-3">
+				<div class="dropdown">
+				  <a id="dLabel" class="btn btn-primary" data-target="#" href="http://www.baidu.com" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+				    链接式
+				    <span class="caret"></span>
+				  </a>
+				
+				  <ul class="dropdown-menu" aria-labelledby="dLabel">
+				    ...
+				  </ul>
+				</div>
+			</div>
+		</div>
+		<hr>
+		<!-- 
+		 即使在使用js调用下拉菜单的情况下，仍然需要在触发的控件上指定data-toggle="dropdown"属性
+		 -->
+		<div class="row">
+			<h3>使用JavaScript调用下拉菜单</h3>
+			<div class="col-sm-3">
+				<div class="dropdown">
+				  <button id="dLabel" class="btn btn-default" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				    Dropdown trigger
+				    <span class="caret"></span>
+				  </button>
+				  <ul class="dropdown-menu" aria-labelledby="dLabel">
+				    ...
+				  </ul>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript">
+			function switch(){
+				$('.dropdown-toggle').dropdown()
+			}
+			
+		</script>
+		<!--
+			和模态框一样，该动画有属于它自己的事件监听
+			show.bs.dropdown：下拉菜单被激活时
+			shown.bs.dropdown：下拉菜单加载完成时
+			hide.bs.dropdown：下拉菜单开始收回时
+			hiden.bs.dropdown：收回动作完成时
+			$("#Mydropdown").on('show.bs.dropdown',function(){
+				//do something
+			})
+		 -->
+		<div class="row">
+			
+			<h3>事件监听</h3>
+		</div>	
+	</div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="js/jquery_1.11.1.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
+  </body>
+</html>

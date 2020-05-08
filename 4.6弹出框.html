@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+	<link rel="stylesheet" type="text/css" href="css/index.css"/>
+    <title>Hello, world!</title>
+	<style type="text/css">
+		.row:first-child{
+			margin-top: 50px;
+		}
+	</style>
+  </head>
+  <body>
+    <div class="container">
+		<!-- 
+			注意事项：
+			1.弹出框依赖工具提示插件
+			//定制bootstrap时不要忘记加上工具提示
+			2.弹出框也是需要手动初始化的：
+				$(function () {
+				  $('[data-toggle="popover"]').popover()
+				})
+			3.弹出框在button groups、input groups、tables需要特殊的设置
+			//指定data-container="body"
+			4.不要尝试在隐藏的元素上显示弹出框
+			5.应用在disable元素中，建议使用一个父级元素（div）来包裹并替代该元素
+			
+			
+			要领：
+			1.为控制开关添加
+				data-toogle="popover"（目标控件的类别）
+				data-plactment="left"（弹出方向，默认为右方）
+				title=""（弹出框的标题）
+				content=""（弹出框的内容）
+			2.手动激活弹出框
+				
+		 -->
+		<div class="row">
+			<h3>实例演示</h3>
+			<div class="col-sm-6">
+				<button type="button" class="btn btn-lg btn-danger" data-toggle="popover" title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?">
+					点我弹出/隐藏弹出框
+				</button>
+			</div>
+		</div>
+		<hr>
+		<!-- 
+			需要额外指定控制开关的属性data-container="body"
+		 -->
+		<div class="row">
+			<h3>放置在按钮组中的弹出框</h3>
+			<div class="col-sm-6 col-sm-offset-2">
+				<div class="btn-group">
+					<button type="button" class="btn btn-default" data-container="body" data-toggle="popover" data-placement="left" title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?">left</button>
+					<button type="button" class="btn btn-default" data-container="body" data-toggle="popover" data-placement="top" title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?">top</button>
+					<button type="button" class="btn btn-default" data-container="body" data-toggle="popover" data-placement="bottom" title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?">bottom</button>
+					<button type="button" class="btn btn-default" data-container="body" data-toggle="popover" data-placement="right" title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?">right</button>
+				</div>
+			</div>
+		</div>
+		<hr>
+		<!-- 
+			需要额外指定data-trigger="focus"
+		 -->
+		<div class="row">
+			<h3>点击弹出框使其消失</h3>
+			<div class="col-sm-6">
+				<a tabindex="0" class="btn btn-lg btn-danger" role="button" data-toggle="popover" data-trigger="focus" title="Dismissible popover" data-content="And here's some amazing content. It's very engaging. Right?">可消失的弹出框</a>
+			</div>
+		</div>
+		<hr>
+	</div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="js/jquery_1.11.1.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$(function () {
+		  $('[data-toggle="popover"]').popover()
+		})
+	</script>
+  </body>
+</html>

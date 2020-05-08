@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+	<link rel="stylesheet" type="text/css" href="css/index.css"/>
+    <title>Hello, world!</title>
+	<style type="text/css">
+		.row:first-child{
+			margin-top: 50px;
+		}
+	</style>
+  </head>
+  <body>
+    <div class="container">
+		<!-- 
+			给链接、导航等元素嵌套 <span class="badge"> 元素，可以很醒目的展示新的或未读的信息条目
+			如果没有新的或未读的信息条目，徽章组件能够自动隐藏（通过CSS的 :empty 选择符实现) 
+			也就是说span中没有数字，就不会显示出来
+		 -->
+		<div class="row">
+			<h3>徽章</h3>
+			<div class="col-sm-3">
+				<a href="#">Inbox <span class="badge">32</span></a>
+				
+				<button class="btn btn-primary" type="button">
+				  Messages <span class="badge">4</span>
+				</button>
+			</div>
+		</div>
+		<hr>
+		<div class="row">
+			<!-- Bootstrap 提供了内置的样式，让胶囊式导航内处于激活状态的元素所包含的徽章展示相匹配的样式 -->
+			<h3>为导航栏做出适配</h3>
+			<ul class="nav nav-pills" role="tablist">
+			  <li role="presentation" class="active"><a href="#">Home <span class="badge">42</span></a></li>
+			  <li role="presentation"><a href="#">Profile</a></li>
+			  <li role="presentation"><a href="#">Messages <span class="badge">3</span></a></li>
+			</ul>
+		</div>
+	</div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="js/jquery_1.11.1.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
+  </body>
+</html>

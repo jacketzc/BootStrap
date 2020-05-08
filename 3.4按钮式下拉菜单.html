@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>hello world</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+	<style type="text/css">
+		.row{
+			margin-top: 50px;
+		}
+	</style>
+  </head>
+  
+  <body>
+    <div class="container">
+		<!-- 
+			只要改变一些基本的标记，就能把按钮变成下拉菜单的开关
+		 -->
+    	<div class="row">
+    		<h3><mark>单</mark>按钮下拉菜单</h3>
+			<div class="col-sm-12">
+				<div class="btn-group">
+				  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				    Action <span class="caret"></span>
+				  </button>
+				  <ul class="dropdown-menu">
+				    <li><a href="#">Action</a></li>
+				    <li><a href="#">Another action</a></li>
+				    <li><a href="#">Something else here</a></li>
+				    <li role="separator" class="divider"></li>
+				    <li><a href="#">Separated link</a></li>
+				  </ul>
+				</div>
+			</div>
+    	</div>
+		<hr >
+		<!-- 
+			分裂式按钮下拉菜单也需要同样的改变一些标记，但只是多一个分开的按钮
+			 -->
+		<div class="row">
+			<h3>分裂式按钮下拉菜单</h3>
+			<div class="col-sm-12">
+				<div class="btn-group">
+				  <button type="button" class="btn btn-default">Action</button>
+				  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					<span class="caret"></span>
+					<span class="sr-only">Toggle Dropdown</span>
+				  </button>
+				  <ul class="dropdown-menu">
+				    <li><a href="#">Action</a></li>
+				    <li><a href="#">Another action</a></li>
+				    <li><a href="#">Something else here</a></li>
+				    <li role="separator" class="divider"></li>
+				    <li><a href="#">Separated link</a></li>
+				  </ul>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<h3>按钮式下拉菜单适用所有尺寸的按钮</h3>
+			<div class="col-sm-12">
+				<div class="btn-group">
+				  <button class="btn btn-default btn-lg dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				    Large button <span class="caret"></span>
+				  </button>
+				  <ul class="dropdown-menu">
+				    ...
+				  </ul>
+				</div>
+				
+				<!-- Small button group -->
+				<div class="btn-group">
+				  <button class="btn btn-default btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				    Small button <span class="caret"></span>
+				  </button>
+				  <ul class="dropdown-menu">
+				    ...
+				  </ul>
+				</div>
+				
+				<!-- Extra small button group -->
+				<div class="btn-group">
+				  <button class="btn btn-default btn-xs dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				    Extra small button <span class="caret"></span>
+				  </button>
+				  <ul class="dropdown-menu">
+				    ...
+				  </ul>
+				</div>
+			</div>
+		</div>
+		<!-- 
+			给父元素添加 .dropup 类就能使触发的下拉菜单朝上方打开
+		 -->
+		<div class="row">
+			<h3>向上弹出式菜单</h3>
+			<div class="col-sm-12">
+				<div class="btn-group dropup">
+				  <button type="button" class="btn btn-default">Dropup</button>
+				  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				    <span class="caret"></span>
+				    <span class="sr-only">Toggle Dropdown</span>
+				  </button>
+				  <ul class="dropdown-menu">
+				    <!-- Dropdown menu links -->
+				  </ul>
+				</div>
+			</div>
+		</div>
+    </div>
+	
+	<script src="js/jquery_1.11.1.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+  </body>
+</html>

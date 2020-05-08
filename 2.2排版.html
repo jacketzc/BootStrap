@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
+		<title>Hello, world!</title>
+	</head>
+	<body>
+		<div class="container">
+			<div class="row">
+				<!-- 标题和副标题 -->
+				<h1>h1. Bootstrap heading <small>Secondary text</small></h1>
+				<h2>h2. Bootstrap heading <small>Secondary text</small></h2>
+				<h3>h3. Bootstrap heading <small>Secondary text</small></h3>
+				<h4>h4. Bootstrap heading <small>Secondary text</small></h4>
+				<h5>h5. Bootstrap heading <small>Secondary text</small></h5>
+				<h6>h6. Bootstrap heading <small>Secondary text</small></h6>
+			</div>
+			<hr>
+			<div class="row">
+				<!-- 
+				段落被指定为固定的格式
+				font-size=14px
+				line-height=1.428
+			 -->
+				<p>Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient
+					montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.</p>
+			</div>
+			<hr>
+			<div id="row">
+				<!-- 使用lead样式以突出显示 -->
+				<p class="lead">Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo
+					luctus.</p>
+			</div>
+			<hr>
+			<div class="row">
+				<!-- 使用mark标签标记重点内容 -->
+				You can use the mark tag to <mark>highlight</mark> text.
+				<br>
+				<!-- 使用del标签标记删除的内容 -->
+				<del>This line of text is meant to be treated as deleted text.</del>
+				<br>
+				<!-- 使用small标签标记小号文本（小号文本将为父容器的85%） -->
+				<small>This line of text is meant to be treated as fine print.</small>
+				<br>
+				<!-- 使用strong标签强调文本（字体会加粗） -->
+				<strong>rendered as bold text</strong>
+				<br>
+				<!-- 使用em标签创造一个斜体 -->
+				<em>rendered as italicized text</em>
+
+			</div>
+			<hr>
+			<div class="row">
+				<!-- 使用专属的类将文本对齐 -->
+				<p class="text-left">Left aligned text.</p>
+				<p class="text-center">Center aligned text.</p>
+				<p class="text-right">Right aligned text.</p>
+				<p class="text-justify">Justified text.</p>
+				<p class="text-nowrap">No wrap text.</p>
+			</div>
+			<hr>
+			<div class="row">
+				<!-- 使用专有的类改变大小写 -->
+				<p class="text-lowercase">Lowercased text.</p>
+				<p class="text-uppercase">Uppercased text.</p>
+				<p class="text-capitalize">Capitalized text.</p>
+			</div>
+			<hr>
+			<div class="row">
+				<!-- 使用abbr标签创造一个缩略语，类并非必选 -->
+				<abbr title="HyperText Markup Language" class="initialism">HTML</abbr>
+			</div>
+			<hr>
+			<div class="row">
+				<!-- 通常的地址用法 -->
+				<address>
+					<strong>Twitter, Inc.</strong><br>
+					1355 Market Street, Suite 900<br>
+					San Francisco, CA 94103<br>
+					<abbr title="Phone">P:</abbr> (123) 456-7890
+				</address>
+
+				<address>
+					<strong>Full Name</strong><br>
+					<a href="mailto:#">first.last@example.com</a>
+				</address>
+			</div>
+			<hr>
+			<div class="row">
+				<!-- blockquote标签创造了默认的引用样式，尽量使用p标签包围文本 -->
+				<blockquote>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+				</blockquote>
+				<!-- footer标签可以产生引用来源的样式 -->
+				<blockquote>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+					<footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
+				</blockquote>
+				<!-- 添加reverse的选项可以让引用呈现右对齐的效果 -->
+				<blockquote class="blockquote-reverse">
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+					<footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
+				</blockquote>
+			</div>
+			<hr>
+			<div class="row">
+				<!-- 无序列表 -->
+				<ul>
+					<li>...</li>
+					<li>...</li>
+					<li>...</li>
+				</ul>
+				<!-- 有序列表 -->
+				<ol>
+					<li>...</li>
+					<li>...</li>
+					<li>...</li>
+				</ol>
+				<!-- 无样式列表 -->
+				<ul class="list-unstyled">
+					<li>...</li>
+					<li>...</li>
+					<li>...</li>
+				</ul>
+				<!-- 内联列表（元素周围没有换行符，都显示在一行） -->
+				<ul class="list-inline">
+					<li>...</li>
+					<li>...</li>
+					<li>...</li>
+				</ul>
+				<dl>
+					<!-- 小标题样式的短语列表 -->
+					<dt>Description lists</dt>
+					<dd>A description list is perfect for defining terms.</dd>
+					<dt>Euismod</dt>
+					<dd>Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.
+						Donec id elit non mi porta gravida at eget metus.</dd>
+					<dt>Malesuada porta</dt>
+					<dd>Etiam porta sem malesuada magna mollis euismod.</dd>
+				</dl>
+				<dl class="dl-horizontal">
+					<!-- 水平排列的短语列表（在宽度比较窄的时候这个样式会消失） -->
+					<dt>Description lists</dt>
+					<dd>A description list is perfect for defining terms.</dd>
+					<dt>Euismod</dt>
+					<dd>Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.
+						Donec id elit non mi porta gravida at eget metus.</dd>
+					<dt>Malesuada porta</dt>
+					<dd>Etiam porta sem malesuada magna mollis euismod.</dd>
+				</dl>
+			</div>
+			<hr>
+			<div class="row">
+
+			</div>
+		</div>
+
+		<!-- Optional JavaScript -->
+		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+		<script src="js/jquery_1.11.1.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>

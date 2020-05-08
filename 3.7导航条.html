@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+	<!-- 导航条不是标签页 -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>hello world</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+	<style type="text/css">
+		.row:first-child{
+			margin-top: 50px;
+		}
+	</style>
+  </head>
+  
+  <body>
+    <!-- 
+		导航条是在您的应用或网站中作为导航页头的响应式基础组件
+		它们在移动设备上可以折叠（并且可开可关）
+		且在视口（viewport）宽度增加时逐渐变为水平展开模式
+		该变化由@grid-float-breakpoint的媒体查询控制
+		注意事项：
+		1.两端对齐的导航栏已经被弃用
+		2.bootstrap并不能控制元素的溢出的问题
+			这意味着：
+				可能需要减少元素所占的宽度
+				在某些尺寸的屏幕上利用响应式工具隐藏掉部分内容
+				可能需要修改折叠效果触发的屏幕尺寸（修改媒体查询限制）
+		3.依赖js插件
+		4.务必使用nav标签
+	-->
+	<nav class="navbar navbar-default">
+	  <!-- 在导航栏中内嵌一个container或者container-fluid可以使导航栏样式居中 -->
+	  <div class="container-fluid">
+	    <!-- 
+			导航的头部
+			由按钮（为移动设备优化显示）和品牌标签组成
+		 -->
+	    <div class="navbar-header">
+		  <!-- 当宽度小于768px时，该按钮就会显示 -->
+	      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+	        <span class="sr-only">Toggle navigation</span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	      </button>
+		 <!-- 将导航条内放置品牌标志的地方替换为 <img> 元素即可展示自己的品牌图标 -->
+		 <!-- 此处的链接中的文字可以使用图片替换 -->
+	      <a class="navbar-brand" href="#">Brand</a>
+	    </div>
+	
+	    <!-- 
+			导航的主体部分，可以放置标签页（链接）、表单、下拉菜单
+		 -->
+	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	      <ul class="nav navbar-nav">
+	        <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+	        <li><a href="#">Link</a></li>
+	        <li class="dropdown">
+	          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+	          <ul class="dropdown-menu">
+	            <li><a href="#">Action</a></li>
+	            <li><a href="#">Another action</a></li>
+	            <li><a href="#">Something else here</a></li>
+	            <li role="separator" class="divider"></li>
+	            <li><a href="#">Separated link</a></li>
+	            <li role="separator" class="divider"></li>
+	            <li><a href="#">One more separated link</a></li>
+	          </ul>
+	        </li>
+	      </ul>
+		  <!-- 
+			将表单放置于 .navbar-form 之内可以呈现很好的垂直对齐
+			并在较窄的视口（viewport）中呈现折叠状态
+		  -->
+	      <form class="navbar-form navbar-left">
+	        <div class="form-group">
+	          <input type="text" class="form-control" placeholder="Search">
+	        </div>
+	        <button type="submit" class="btn btn-default">Submit</button>
+	      </form>
+	      <ul class="nav navbar-nav navbar-right">
+	        <li><a href="#">Link</a></li>
+	        <li class="dropdown">
+	          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+	          <ul class="dropdown-menu">
+	            <li><a href="#">Action</a></li>
+	            <li><a href="#">Another action</a></li>
+	            <li><a href="#">Something else here</a></li>
+	            <li role="separator" class="divider"></li>
+	            <li><a href="#">Separated link</a></li>
+	          </ul>
+	        </li>
+	      </ul>
+	    </div><!-- /.navbar-collapse -->
+	  </div><!-- /.container-fluid -->
+	</nav>
+	<div class="container">
+		<!-- 在品牌处插入图片 -->
+		<div class="row">
+			<h3>插入图片</h3>
+			<nav class="navbar navbar-default">
+			  <div class="container-fluid">
+			    <div class="navbar-header">
+			      <a class="navbar-brand" href="#">
+			        <img alt="Brand" src="fail">
+			      </a>
+			    </div>
+			  </div>
+			</nav>
+		</div>
+		<hr >
+		<!-- 
+			.navbar-form 和 .form-inline 的大部分代码都一样，内部实现使用了 mixin
+			某些表单组件，例如输入框组，可能需要设置一个固定宽度，从而在导航条内有合适的展现
+			同样的，强烈建议为表单控件设置label（不需要可以隐藏）
+		 -->
+		<div class="row">
+			<h3>插入表单</h3>
+			<form class="navbar-form navbar-left " role="search">
+			  <div class="form-group">
+			    <input type="text" class="form-control" placeholder="Search">
+			  </div>
+			  <button type="submit" class="btn btn-default">Submit</button>
+			</form>
+		</div>
+		<hr >
+		<!-- 
+			对于不包含在 <form> 中的 <button> 元素
+			加上 .navbar-btn 后，可以让它在导航条里“垂直”居中
+		 -->
+		<div class="row">
+			<h3>添加按钮</h3>
+			<button type="button" class="btn btn-default navbar-btn">Sign in</button>
+		</div>
+		<hr >
+		<!-- 把文本包裹在 .navbar-text中时，为了有正确的行距和颜色，通常使用 <p> 标签 -->
+		<div class="row">
+			<h3>文本</h3>
+			<p class="navbar-text">Signed in as Mark Otto</p>
+		</div>
+		<hr >
+		<!-- 
+			使用 .navbar-link 类可以让链接有正确的默认颜色和反色设置
+		 -->
+		<div class="row">
+			<h3>额外的链接</h3>
+			<p class="navbar-text navbar-left">Signed in as <a href="#" class="navbar-link">Mark Otto</a></p>
+		</div>
+		<hr >
+		<!-- 
+			.navbar-left 和 .navbar-right 工具类让导航链接、表单、按钮或文本对齐
+			这些类是 .pull-left 和 .pull-right 的 mixin 版本，但是他们被限定在了媒体查询（media query）中
+		-->
+		<div class="row">
+			<h3>对齐</h3>
+			<form class="navbar-form navbar-left">
+			  <div class="form-group">
+				
+			    <input type="text" class="form-control" placeholder="左对齐">
+			  </div>
+			  <button type="submit" class="btn btn-default">Submit</button>
+			</form>
+			<ul class="nav navbar-nav navbar-right">
+			  <li><a href="#">右对齐</a></li>
+			  <li class="dropdown">
+			    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+			    <ul class="dropdown-menu">
+			      <li><a href="#">Action</a></li>
+			      <li><a href="#">Another action</a></li>
+			      <li><a href="#">Something else here</a></li>
+			      <li role="separator" class="divider"></li>
+			      <li><a href="#">Separated link</a></li>
+			    </ul>
+			  </li>
+			</ul>
+		</div>
+		<hr >
+		<div class="row">
+			<h3>使导航栏固定在顶部或者底部</h3>
+			<!-- 
+				为nav标签添加navbar-fixed-top 类可以让导航条固定在顶部
+				添加navbar-fixed-bottom同理
+				注意事项：
+				固定的导航条会遮住页面上的其它内容（这意味着你需要为body设置一个额外的内边距）
+				（导航栏的默认高度为50xp）
+			 -->
+		</div>
+		<hr >
+		<div class="row">
+			<h3>静止在顶部</h3>
+			<!-- 
+				为nav添加 .navbar-static-top 类即可创建一个与页面等宽度的导航条（削去了边框厚度）
+				除此之外，这个导航条和没有设置该样式的没有差别（不会遮住页面的内容）
+			 -->
+		</div>
+		<hr >
+		<!-- 
+			通过添加 .navbar-inverse 类可以改变导航条的外观
+			除此之外，貌似导航栏并没有特别多的选择
+		 -->
+		<div class="row">
+			<h3>反色的导航条</h3>
+			<nav class="navbar navbar-inverse">
+			  <ul class="nav navbar-nav">
+			    <li><a href="#">link</a></li>
+			    <li class="dropdown">
+			      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+			      <ul class="dropdown-menu">
+			        <li><a href="#">Action</a></li>
+			        <li><a href="#">Another action</a></li>
+			        <li><a href="#">Something else here</a></li>
+			        <li role="separator" class="divider"></li>
+			        <li><a href="#">Separated link</a></li>
+			      </ul>
+			    </li>
+			  </ul>
+			</nav>
+		</div>
+		<hr >
+		<div class="row">
+			<h3></h3>
+		</div>
+		<hr >
+		<div class="row">
+			<h3></h3>
+		</div>
+		<hr >
+	</div>
+	<script src="js/jquery_1.11.1.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+  </body>
+</html>

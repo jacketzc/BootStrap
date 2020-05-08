@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+	<link rel="stylesheet" type="text/css" href="css/index.css"/>
+    <title>Hello, world!</title>
+	<style type="text/css">
+		.row:first-child{
+			margin-top: 50px;
+		}
+	</style>
+  </head>
+  <body>
+    <div class="container">
+		<!-- 
+			需要额外指定警告框alert-dismissible"
+			并且指定关闭按钮的属性class="close"、data-dismiss="alert" 
+			//此关闭按钮必须为警告框的第一个子元素
+			
+			如果想创造淡出效果，为警告框额外添加fade属性和in属性
+		 -->
+		<div class="row">
+			<h3>添加点击并消失的控件</h3>
+			<div class="col-sm-6">
+				<div class="alert alert-warning fade in alert-dismissible" role="alert">
+				  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				  <strong>Warning!</strong> Better check yourself, you're not looking too good.
+				</div>
+			</div>
+		</div>
+		<hr>
+	</div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="js/jquery_1.11.1.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
+  </body>
+</html>

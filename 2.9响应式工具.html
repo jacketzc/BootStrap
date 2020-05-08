@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+	<link rel="stylesheet" type="text/css" href="css/index.css"/>
+    <title>Hello, world!</title>
+	<style type="text/css">
+		.row{
+			margin-bottom: 20px;
+		} 
+		
+	</style>
+  </head>
+  <body>
+    <div class="container">
+		<!-- 
+			通过该响应式工具可以设置页面在不同尺寸屏幕上的可见性
+			可见类（满足该要求可见）：
+			visible-xs-*：仅超小屏幕（<768px）可见
+			visible-sm-*：仅小屏幕（>768px）可见（此时大屏幕和超大屏幕不可见）
+			visible-md-*：仅大屏幕（>992px）可见（此时超大屏幕不可见）
+			visible-lg-*：仅超大屏幕（>1200px）可见
+			*代表的可选参数有：1.block 2.inline 3.block-inline
+			不可见类（满足要求隐藏）
+			hidden-xs：仅超小屏幕不可见
+			hidden-sm：仅小屏幕不可见（注：此时的超小屏幕还是可见的）
+			hidden-md：仅大屏幕不可见（注：此时的小屏幕以及超小屏幕还是可见的）
+			hidden-lg：仅超大屏幕不可见
+		 -->
+		<div class="row">
+			
+		</div>
+		<hr >
+		<div class="row">
+			<table class="table">
+				<tbody>
+					<tr>
+						<th class="success visible-xs-block">bootstrap1</th>
+						<th class="warning visible-sm-block">bootstrap2</th>
+						<th class="dange visible-md-block">bootstrap3</th>
+					</tr>
+					<tr>
+						<th class="success hidden-xs">bootstrap4</th>
+						<th class="warning hidden-sm">bootstrap5</th>
+						<th class="danger hidden-md">bootstrap6</th>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<hr >
+		<!-- 事实证明，在div的栅格系统中，显示的部分仍然会按照以前的方式填充，如果想要使用响应式设计，请添加混合栅格系统 -->
+		<div class="row">
+			<div class="col-xs-6 col-sm-4 text-center " >
+				bootstrap1
+			</div>
+			<div class="col-xs-6 col-sm-4 text-center">
+				bootstrap2
+			</div>
+			<div class="col-sm-4 text-center bg-danger hidden-xs">
+				bootstrap3
+			</div>
+		</div>
+	</div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="js/jquery_1.11.1.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
+  </body>
+</html>

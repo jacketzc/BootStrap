@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+	<link rel="stylesheet" type="text/css" href="css/index.css"/>
+    <title>Hello, world!</title>
+	<style type="text/css">
+		.row:first-child{
+			margin-top: 50px;
+		}
+	</style>
+  </head>
+  <body>
+    <div class="container">
+		<!-- 
+			要领：
+			1.为控制开关添加data-toggle="tooltip"（目标控件的类别）
+				data-placement="left"（提示出现的位置）
+				title="Tooltip on left"（控件显示的信息）
+			2.手动激活控件（是的，此控件不会因为设置data属性就会自动激活）
+				$(function () {
+				  $('[data-toggle="tooltip"]').tooltip()
+				})
+		 -->
+		<div class="row">
+			<h3>基本案例</h3>
+			<div class="col-sm-2 col-sm-offset-2">
+				<button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="left" title="Tooltip on left">
+					Tooltip on left
+				</button>
+			</div>
+			<div class="col-sm-2">
+				<button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
+					Tooltip on top
+				</button>
+			</div>
+			<div class="col-sm-2">
+				<button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom">
+					Tooltip on bottom
+				</button>
+			</div>
+			<div class="col-sm-2">
+				<button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="right" title="Tooltip on right">
+					Tooltip on right
+				</button>
+			</div>
+		</div>
+		<hr>
+	</div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="js/jquery_1.11.1.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$(function () {
+		  $('[data-toggle="tooltip"]').tooltip()
+		})
+	</script>
+  </body>
+</html>

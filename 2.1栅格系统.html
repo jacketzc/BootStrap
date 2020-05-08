@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
+		<title>Hello, world!</title>
+		<style type="text/css">
+			.row{
+				margin-bottom: 20px;
+			} 
+			.row>div{
+				border: 1px #31B0D5 solid;
+			}
+			hr{
+				height: 1px;
+				background-color: #EEA236 ;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+
+			<!-- 基本的栅格系统由行（row）与列（col）组成 -->
+			<!-- 
+			媒体查询：（这些样式将在对应的条件下生效）
+			超小屏幕（>0px）：col-xs BootStrap默认（移动设备优先）
+			小屏幕（>768px）：col-sm
+			中屏幕（>992px）：col-md
+			大屏幕（>1200px)：col-lg
+		 -->
+			<div class="row">
+				<!-- 基本栅格系统每行有12列，填满将自动换行 -->
+				<div class="col-md-1">.col-md-1</div>
+				<div class="col-md-1">.col-md-1</div>
+				<div class="col-md-1">.col-md-1</div>
+				<div class="col-md-1">.col-md-1</div>
+				<div class="col-md-1">.col-md-1</div>
+				<div class="col-md-1">.col-md-1</div>
+				<div class="col-md-1">.col-md-1</div>
+				<div class="col-md-1">.col-md-1</div>
+				<div class="col-md-1">.col-md-1</div>
+				<div class="col-md-1">.col-md-1</div>
+				<div class="col-md-1">.col-md-1</div>
+				<div class="col-md-1">.col-md-1</div>
+			</div>
+			<div class="row">
+				<div class="col-md-8">.col-md-8</div>
+				<div class="col-md-4">.col-md-4</div>
+			</div>
+			<div class="row">
+				<div class="col-md-4">.col-md-4</div>
+				<div class="col-md-4">.col-md-4</div>
+				<div class="col-md-4">.col-md-4</div>
+			</div>
+			<div class="row">
+				<div class="col-md-6">.col-md-6</div>
+				<div class="col-md-6">.col-md-6</div>
+			</div>
+			<hr >
+			<!-- 可以添加组合以应对不同尺寸的屏幕 -->
+			<div class="row">
+			  <div class="col-xs-12 col-sm-6 col-md-8">.col-xs-12 .col-sm-6 .col-md-8</div>
+			  <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
+			</div>
+			<div class="row">
+			  <div class="col-xs-6 col-sm-4">.col-xs-6 .col-sm-4</div>
+			  <div class="col-xs-6 col-sm-4">.col-xs-6 .col-sm-4</div>
+			  <!-- Optional: clear the XS cols if their content doesn't match in height -->
+			  <div class="clearfix visible-xs-block"></div>
+			  <div class="col-xs-6 col-sm-4">.col-xs-6 .col-sm-4</div>
+			</div>
+			<hr >
+			<!-- 多余的部分将会在此列溢出（此列的高度将超过同行的其他高度） -->
+			<div class="row">
+			  <div class="col-xs-9">.col-xs-9</div>
+			  <div class="col-xs-4">.col-xs-4<br>Since 9 + 4 = 13 &gt; 12, this 4-column-wide div gets wrapped onto a new line as one contiguous unit.</div>
+			  <div class="col-xs-6">.col-xs-6<br>Subsequent columns continue along the new line.</div>
+			  <!-- 为了避免新起的行从上方溢出的栅格开始，使用clearfix另起一行 -->
+			  <div class="clearfix visible-xs-block"></div>
+			  <!-- 该操作将在超小屏幕上实现 -->
+			  <div class="col-xs-6">.col-xs-6<br>Subsequent columns continue along the new line.</div>
+			</div>
+			<hr >
+			<!-- 使用offset参数可以使得该列偏移（原理是设置margin属性） -->
+			<div class="row">
+			  <div class="col-md-4">.col-md-4</div>
+			  <div class="col-md-4 col-md-offset-4">.col-md-4 .col-md-offset-4</div>
+			</div>
+			<div class="row">
+			  <div class="col-md-3 col-md-offset-3">.col-md-3 .col-md-offset-3</div>
+			  <div class="col-md-3 col-md-offset-3">.col-md-3 .col-md-offset-3</div>
+			</div>
+			<div class="row">
+			  <div class="col-md-6 col-md-offset-3">.col-md-6 .col-md-offset-3</div>
+			</div>
+			<hr >
+			<!-- 栅格中可以嵌套栅格，和父容器一样，它也具有12个列 -->
+			<div class="row">
+			  <div class="col-sm-9">
+			    Level 1: .col-sm-9
+			    <div class="row">
+			      <div class="col-xs-8 col-sm-6">
+			        Level 2: .col-xs-8 .col-sm-6
+			      </div>
+			      <div class="col-xs-4 col-sm-6">
+			        Level 2: .col-xs-4 .col-sm-6
+			      </div>
+			    </div>
+			  </div>
+			</div>
+			<hr >
+			<!-- 通过push和pull属性可以改变列的顺序（通过设置left属性实现） -->
+			<div class="row">
+			  <div class="col-md-9 col-md-push-3">.col-md-9 .col-md-push-3</div>
+			  <div class="col-md-3 col-md-pull-9">.col-md-3 .col-md-pull-9</div>
+			</div>
+		</div>
+
+		<!-- Optional JavaScript -->
+		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+		<script src="js/jquery_1.11.1.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>

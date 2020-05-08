@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
+		<title>Hello, world!</title>
+		<style type="text/css">
+			.row:first-child {
+				margin-top: 50px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<!-- 
+			折叠框一共有三个状态
+			1.coolapse：叠起状态
+			2.coolapsing：正在展开
+			3.coolapse in：展开完成
+		
+			要诀：
+			1.为控制开关添加属性
+				data-toggle="collapse"（目标控件种类）
+				如果该开关是链接，则使用href="#collapseExample"指向目标控件
+				如果是按钮，使用data-target="#collapseExample"
+			2.目标控件添加属性class="collapse"
+		 -->
+			<div class="row">
+				<h3>基本案例</h3>
+				<div class="col-sm-6">
+					<a class="btn btn-primary" role="button" data-toggle="collapse" href="#collapseExample" aria-expanded="false"
+					 aria-controls="collapseExample">
+						Link with href
+					</a>
+					<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false"
+					 aria-controls="collapseExample">
+						Button with data-target
+					</button>
+					<div class="collapse" id="collapseExample">
+						<!-- well是一个共用属性，为文字域添加一个背景样式 -->
+						<div class="well">
+							Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim
+							keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+						</div>
+					</div>
+
+				</div>
+			</div>
+			<hr>
+			<!-- 
+			collapsed属性虽然没有出现在bootstrap.css样式表中，但是它出现在了bootstrap.js文件中
+			//但我仍然不知道它是干什么用的
+		 -->
+			<div class="row">
+				<h3>面板组与折叠框</h3>
+				<div class="col-sm-8">
+					<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+						<div class="panel panel-info">
+							<div class="panel-heading" role="tab" id="headingOne">
+								<h4 class="panel-title">
+									<a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true"
+									 aria-controls="collapseOne">
+										Collapsible Group Item #1
+									</a>
+								</h4>
+							</div>
+							<div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+								<div class="panel-body">
+									Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon
+									officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf
+									moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim
+									keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur
+									butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably
+									haven't heard of them accusamus labore sustainable VHS.
+								</div>
+							</div>
+						</div>
+						<div class="panel panel-danger">
+							<div class="panel-heading" role="tab" id="headingTwo">
+								<h4 class="panel-title">
+									<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo"
+									 aria-expanded="false" aria-controls="collapseTwo">
+										Collapsible Group Item #2
+									</a>
+								</h4>
+							</div>
+							<div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+								<div class="panel-body">
+									Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon
+									officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf
+									moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim
+									keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur
+									butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably
+									haven't heard of them accusamus labore sustainable VHS.
+								</div>
+							</div>
+						</div>
+						<div class="panel panel-success">
+							<div class="panel-heading" role="tab" id="headingThree">
+								<h4 class="panel-title">
+									<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree"
+									 aria-expanded="false" aria-controls="collapseThree">
+										Collapsible Group Item #3
+									</a>
+								</h4>
+							</div>
+							<div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+								<div class="panel-body">
+									Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon
+									officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf
+									moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim
+									keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur
+									butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably
+									haven't heard of them accusamus labore sustainable VHS.
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<hr>
+			<!-- 
+				这种感觉上像下拉菜单，但是它和下拉菜单之间有另一种感觉
+			 -->
+			<div class="row">
+				<h3>列表组和折叠框</h3>
+				<div class="col-sm-6">
+					<ul class="list-group">
+						<li class="list-group-item">
+							<a role="button" data-toggle="collapse" href="#collapse1">Collapsible list group </a>
+						</li>
+						<div class="collapse" id="collapse1">
+							<li class="list-group-item">Cras justo odio</li>
+							<li class="list-group-item">Dapibus ac facilisis in</li>
+							<li class="list-group-item">Morbi leo risus</li>
+							<li class="list-group-item">Porta ac consectetur ac</li>
+						</div>
+					</ul>
+				</div>
+			</div>
+			<hr>
+		</div>
+
+		<!-- Optional JavaScript -->
+		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+		<script src="js/jquery_1.11.1.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>

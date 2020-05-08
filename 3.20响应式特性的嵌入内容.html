@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+	<link rel="stylesheet" type="text/css" href="css/index.css"/>
+    <title>Hello, world!</title>
+	<style type="text/css">
+		.row:first-child{
+			margin-top: 50px;
+		}
+	</style>
+  </head>
+  <body>
+	  <!-- 
+		根据被嵌入内容的外部容器的宽度，自动创建一个固定的比例，从而让浏览器自动确定视频或 slideshow 的尺寸，能够在各种设备上缩放。
+		这些规则被直接应用在 <iframe>、<embed>、<video> 和 <object> 元素上。如果你希望让最终样式与其他属性相匹配，还可以明确地使用一个派生出来的 .embed-responsive-item 类。
+		不需要为 <iframe> 元素设置 frameborder="0" 属性，因为我们已经替你这样做了
+	  -->
+    <div class="container">
+		<div class="row">
+			<div class="embed-responsive embed-responsive-16by9">
+			  <iframe class="embed-responsive-item" src="..."></iframe>
+			</div>
+			
+			<!-- 4:3 aspect ratio -->
+			<div class="embed-responsive embed-responsive-4by3">
+			  <iframe class="embed-responsive-item" src="..."></iframe>
+			</div>
+		</div>
+		<hr>
+	</div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="js/jquery_1.11.1.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
+  </body>
+</html>

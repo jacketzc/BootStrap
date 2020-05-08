@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+	<link rel="stylesheet" type="text/css" href="css/index.css"/>
+    <title>Hello, world!</title>
+	<style type="text/css">
+		.row:first-child{
+			margin-top: 50px;
+		}
+	</style>
+  </head>
+  <body>
+    <div class="container">
+		
+		<!-- 
+			将任意文本和一个可选的关闭按钮组合在一起就能组成一个警告框
+			警告框没有默认类，只有基类和修饰类
+			目前提供了成功、消息、警告或危险。
+			我只知道有警告框，但我不知道如何弹出
+		 -->
+		
+		<div class="row">
+			<h3>基本案例</h3>
+			<div class="col-sm-6">
+				<div class="alert alert-success" role="alert">Well done! You successfully read this important alert message. </div>
+				<div class="alert alert-info" role="alert">Well done! You successfully read this important alert message. </div>
+				<div class="alert alert-warning" role="alert">Well done! You successfully read this important alert message. </div>
+				<div class="alert alert-danger" role="alert">Well done! You successfully read this important alert message. </div>
+			</div>
+		</div>
+		<hr>
+		<!-- 
+			为警告框添加一个可选的 .alert-dismissible 类和一个关闭按钮。
+		 -->
+		<div class="row">
+			<h3>可关闭的警告框</h3>
+			<div class="col-sm-6">
+				<div class="alert alert-warning alert-dismissible" role="alert">
+					<!-- 
+						务必给 <button> 元素添加 data-dismiss="alert" 属性
+					 -->
+				  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				  <strong>Warning!</strong> Better check yourself, you're not looking too good.
+				</div>
+			</div>
+		</div>
+		<hr>
+		<!-- 
+		 用 .alert-link 工具类，可以为链接设置与当前警告框相符的颜色
+		 -->
+		<div class="row">
+			<h3>警告框中的链接</h3>
+			<div class="col-sm-6">
+				<div class="alert alert-success" role="alert">
+					this important alert message. 
+				  <a href="#" class="alert-link">this important alert message. </a>
+				</div>
+				<div class="alert alert-info" role="alert">
+					Heads up! This
+				  <a href="#" class="alert-link">alert needs your attention</a>
+				  alert needs your attention
+				</div>
+				<div class="alert alert-warning" role="alert">
+					alert needs your attention
+				  <a href="#" class="alert-link">not looking too good. </a>
+				</div>
+				<div class="alert alert-danger" role="alert">
+					Oh snap!
+				  <a href="#" class="alert-link">Change a few things up</a>
+				  and try submitting again. 
+				</div>
+			</div>
+		</div>
+		<hr>
+	</div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="js/jquery_1.11.1.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
+  </body>
+</html>

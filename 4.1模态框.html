@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+	<link rel="stylesheet" type="text/css" href="css/index.css"/>
+    <title>模态框</title>
+	<style type="text/css">
+		.row:first-child{
+			margin-top: 50px;
+		}
+	</style>
+  </head>
+  <body>
+	  <!-- 
+		以弹出对话框的形式出现，具有最小和最实用的功能集
+		modal为基本属性，fade类制造了淡入和淡出的效果（不需要可以删去）
+		注意事项：
+		1.不支持同时打开多个模态框
+		2.模态框尽量作为body的直接子元素，以避免其他组件影响模态框的展现和/或功能。
+		
+		调用方式：
+		1.通过data属性
+			通过在一个起控制器作用的元素（例如：按钮）上添加 data-toggle="modal" 属性（开关的类型），
+			添加data-target="#id名" 属性（或者是.class名），用于指向被控制的模态框
+			//在内部的组件只需要添加data-toogle属性，因为它已经绑定了受控制的组件
+		2.通过 JavaScript 调用
+			$('#myModal').modal(options)
+			//参数是可选的
+		
+		要领：
+		1.为控制开关添加data-toggle="modal"（目标控件的类别）
+			data-target="#myModal"（目标控件）
+		2.目标控件（模态框）分为三层
+			最外层：class="modal"
+			会话层：class="modal-dialog"
+			内容层：lass="modal-content"
+				内容层中可以指定"modal-header"、"modal-header"以及"modal-footer"
+	  -->
+    <h3>静态实例</h3>
+	<div class="modal fade" tabindex="-1" role="dialog">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	        <h4 class="modal-title">Modal title</h4>
+	      </div>
+	      <div class="modal-header">
+	        <p>One fine body&hellip;</p>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	        <button type="button" class="btn btn-primary">Save changes</button>
+	      </div>
+	    </div><!-- /.modal-content -->
+	  </div><!-- /.modal-dialog -->
+	</div>
+	<hr>
+	<!-- 
+		原理在于将modal的设置display属性为block
+		增强课访问性：
+			为 .modal 添加 role="dialog" 和 aria-labelledby="..." 属性，用于指向模态框的标题栏
+			为 .modal-dialog 添加 aria-hidden="true" 属性。
+		-->
+	<h3>通过按钮/链接激活模态框</h3>
+	<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+	  按钮
+	</button>
+	<a href="#myModal" class="btn btn-success" data-toggle="modal">链接</a>
+	<!-- 使用js无参激活 -->
+	<script type="text/javascript">
+		function show(){
+			$('#myModal').modal();
+		}
+	</script>
+	<!-- Modal -->
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+	      </div>
+	      <div class="modal-body">
+	        ...
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	        <button type="button" class="btn btn-primary">Save changes</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	<hr>
+	<h3>可选尺寸</h3>
+	<!-- Large modal -->
+	<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">Large modal</button>
+	
+	<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+	  <div class="modal-dialog modal-lg" role="document">
+	    <div class="modal-content">
+	      ...
+	    </div>
+	  </div>
+	</div>
+	
+	<!-- Small modal -->
+	<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-sm">Small modal</button>
+	
+	<div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+	  <div class="modal-dialog modal-sm" role="document">
+	    <div class="modal-content">
+	      ...
+	    </div>
+	  </div>
+	</div>
+	<hr>
+	<!-- 
+		模态框的宽度是一定的，但是内部的主体部分任然可以使用栅格系统划分
+	 -->
+	<h3>使用栅格系统</h3>
+	<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModel2">Large modal</button>
+	<div class="modal fade" id="myModel2" tabindex="-1" role="dialog" aria-labelledby="gridSystemModalLabel">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	        <h4 class="modal-title" id="gridSystemModalLabel">Modal title</h4>
+	      </div>
+	      <div class="modal-body">
+	        <div class="row">
+	          <div class="col-md-4">.col-md-4</div>
+	          <div class="col-md-4 col-md-offset-4">.col-md-4 .col-md-offset-4</div>
+	        </div>
+	        <div class="row">
+	          <div class="col-md-3 col-md-offset-3">.col-md-3 .col-md-offset-3</div>
+	          <div class="col-md-2 col-md-offset-4">.col-md-2 .col-md-offset-4</div>
+	        </div>
+	        <div class="row">
+	          <div class="col-md-6 col-md-offset-3">.col-md-6 .col-md-offset-3</div>
+	        </div>
+	        <div class="row">
+	          <div class="col-sm-9">
+	            Level 1: .col-sm-9
+	            <div class="row">
+	              <div class="col-xs-8 col-sm-6">
+	                Level 2: .col-xs-8 .col-sm-6
+	              </div>
+	              <div class="col-xs-4 col-sm-6">
+	                Level 2: .col-xs-4 .col-sm-6
+	              </div>
+	            </div>
+	          </div>
+	        </div>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	        <button type="button" class="btn btn-primary">Save changes</button>
+	      </div>
+	    </div><!-- /.modal-content -->
+	  </div><!-- /.modal-dialog -->
+	</div>
+	<hr>
+	<!-- 
+		多个触发组件可以共用一个模态框
+		每个触发的组件可以携带不同的信息使得模态框的表现多样化
+		这种功能通常用于往模态框中预先填入某种动态内容
+	 -->
+	<h3>模态框的多样化</h3>
+	<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Open modal for @mdo</button>
+	<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@fat">Open modal for @fat</button>
+	<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap">Open modal for @getbootstrap</button>
+	...more buttons...
+	
+	<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	        <h4 class="modal-title" id="exampleModalLabel">New message</h4>
+	      </div>
+	      <div class="modal-body">
+	        <form>
+	          <div class="form-group">
+	            <label for="recipient-name" class="control-label">Recipient:</label>
+	            <input type="text" class="form-control" id="recipient-name">
+	          </div>
+	          <div class="form-group">
+	            <label for="message-text" class="control-label">Message:</label>
+	            <textarea class="form-control" id="message-text"></textarea>
+	          </div>
+	        </form>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	        <button type="button" class="btn btn-primary">Send message</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	<hr>
+	<!-- 
+		可选参数既可以通过data属性设置，也可以通过js配置
+		backdrop（默认true）：包含一个模态背景元素
+		keyboard（默认true）：能否使用esc键关闭模态框
+		show（默认true）：模态框初始化后就被显示出来
+		remote（默认false）：jQuery从指定的URL加载内容插入到modal-content中
+		
+		data设置实例：
+		data-backdrop="false"
+		data-keyboard="false"
+		...
+		
+		js操作实例：
+		开启模态框（带参数）：$('#myModal').modal({
+		  keyboard: false
+		})
+		
+		
+		
+		手动打开或关闭模态框:$('#myModal').modal('toggle')
+		//此事件在触发 shown.bs.modal 或 hidden.bs.modal 事件之前
+		手动打开模态框：$('#myModal').modal('show')
+		//此事件在触发 shown.bs.modal 事件之前
+		手动隐藏模态框：$('#myModal').modal('hide')
+		//在触发 hidden.bs.modal 事件之前
+		
+	 -->
+	<h3>可选参数</h3>
+	<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal3" data-keyboard="false">options</button>
+	<div class="modal fade" id="myModal3">
+		<div class="modal-dialog" >
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" ><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title">Modal title</h4>
+				</div>
+				<div class="modal-body">
+					...
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">close</button>
+					<button type="button" class="btn btn-default" >Save changes</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<hr>
+	<!-- 
+		show.bs.modal: show 方法调用之后立即触发该事件
+		shown.bs.modal:此事件在模态框已经显示出来（并且同时在 CSS 过渡效果完成）之后被触发
+		hide.bs.modal: 	hide 方法调用之后立即触发该事件
+		hidden.bs.modal:此事件在模态框被隐藏（并且同时在 CSS 过渡效果完成）之后被触发
+		loaded.bs.modal:从远端的数据源加载完数据之后触发该事件
+		监听实例：
+		$('#myModal').on('hidden.bs.modal', function (e) {
+		  // do something...
+		})
+	 -->
+	<h3>事件监听</h3>
+	<p>Bootstrap 的模态框类提供了一些事件用于监听并执行你自己的代码</p>
+	
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="js/jquery_1.11.1.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
+	
+	<!-- 自定义的jQuery函数要写在最后面 -->
+	<!-- 对应多样化 -->
+	<script type="text/javascript">
+		$('#exampleModal').on('show.bs.modal', function (event) {//在模态框动画载入时触发函数
+		  var button = $(event.relatedTarget) // 指定触发效果的按钮(应该说是对象)
+		  var recipient = button.data('whatever') // 提取按钮中data-whatever中定义的内容
+		  // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+		  // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+		  var modal = $(this)
+		  modal.find('.modal-title').text('New message to ' + recipient)//把模态框modal-title处的内容替换为括号内的内容
+		  modal.find('.modal-body input').val(recipient)//往body中的input插件中注入提取的内容
+		})
+	</script>
+  </body>
+</html>

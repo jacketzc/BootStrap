@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
+		<title>Hello, world!</title>
+		<style type="text/css">
+			.row:first-child {
+				margin-top: 50px;
+			}
+
+			body {
+				position: relative;
+			}
+		</style>
+	</head>
+	<body data-spy="scroll" data-target="#nav1" data-offset="0">
+		<!-- 
+			滚动监听插件是用来根据滚动条所处的位置来自动更新导航项的
+			滚动监听依赖bootstrap导航组件
+			每一个监听的链接需要匹配一个指定id的容器
+				如：<a href="#001">001</a>和	<div id="001"></div>
+	    -->
+		
+		<div class="container">
+			<!-- 
+				要领：
+				1.需要nav标签还有被监听的组件（已设置id属性）
+				//nav标签的id并不是强制要求，因为也可以通过class查找
+				//被监听组件的id是强制的
+				2.被监听的组件需要设置data-spy="scroll"（固定）、data-target="#nav1"（此处也可以换成class查找）、data-offset="1"（滚动条的相对偏移位置，默认是0，并且在0处不触发监听效果）
+				//被监听的组件需要指定position: relative;（暂时不知道为什么）
+				//被监听的组件不一定是body，因为被监听的组件的滚动条相对于body是独立的
+				3.nav中的链接需要制定href=“对应被监听id”
+			 -->
+			<div class="row">
+				<h3>基本实例</h3>
+				<div class="col-sm-6">
+					<nav class="navbar navbar-default " id="nav1">
+						<ul class="nav navbar-nav">
+							<li>
+								<a href="#one">one</a>
+							</li>
+							<li>
+								<a href="#two">two</a>
+							</li>
+							<li>
+								<a href="#three">three</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+				
+			</div>
+			<div class="row" style="border: 1px red solid;">
+				<div class="col-sm-6" style="height: 280px;overflow-y: scroll; border: 1px #0074E8 solid;" data-spy="scroll" data-target="#nav1" data-offset="1">
+					<div id="one" style="border: 1px #12BC00 solid;">
+						<h3 style="border: 1px #12BC00 solid;">#one</h3>
+				
+						<p>Ad leggings keytar, brunch id art party dolor labore. Pitchfork yr enim lo-fi before they sold out qui. Tumblr
+							farm-to-table bicycle rights whatever. Anim keffiyeh carles cardigan. Velit seitan mcsweeney's photo booth 3
+							wolf moon irure. Cosby sweater lomo jean shorts, williamsburg hoodie minim qui you probably haven't heard of
+							them et cardigan trust fund culpa biodiesel wes anderson aesthetic. Nihil tattooed accusamus, cred irony
+							biodiesel keffiyeh artisan ullamco consequat.</p>
+						<p>Ad leggings keytar, brunch id art party dolor labore. Pitchfork yr enim lo-fi before they sold out qui. Tumblr
+							farm-to-table bicycle rights whatever. Anim keffiyeh carles cardigan. Velit seitan mcsweeney's photo booth 3
+							wolf moon irure. Cosby sweater lomo jean shorts, williamsburg hoodie minim qui you probably haven't heard of
+							them et cardigan trust fund culpa biodiesel wes anderson aesthetic. Nihil tattooed accusamus, cred irony
+							biodiesel keffiyeh artisan ullamco consequat.</p>
+					</div>
+					<div id="two">
+						<h3>#two</h3>
+						<p>Ad leggings keytar, brunch id art party dolor labore. Pitchfork yr enim lo-fi before they sold out qui. Tumblr
+							farm-to-table bicycle rights whatever. Anim keffiyeh carles cardigan. Velit seitan mcsweeney's photo booth 3
+							wolf moon irure. Cosby sweater lomo jean shorts, williamsburg hoodie minim qui you probably haven't heard of
+							them et cardigan trust fund culpa biodiesel wes anderson aesthetic. Nihil tattooed accusamus, cred irony
+							biodiesel keffiyeh artisan ullamco consequat.</p>
+						<p>Ad leggings keytar, brunch id art party dolor labore. Pitchfork yr enim lo-fi before they sold out qui. Tumblr
+							farm-to-table bicycle rights whatever. Anim keffiyeh carles cardigan. Velit seitan mcsweeney's photo booth 3
+							wolf moon irure. Cosby sweater lomo jean shorts, williamsburg hoodie minim qui you probably haven't heard of
+							them et cardigan trust fund culpa biodiesel wes anderson aesthetic. Nihil tattooed accusamus, cred irony
+							biodiesel keffiyeh artisan ullamco consequat.</p>
+					</div>
+					<div id="three">
+						<h3>#three</h3>
+						<p>Ad leggings keytar, brunch id art party dolor labore. Pitchfork yr enim lo-fi before they sold out qui. Tumblr
+							farm-to-table bicycle rights whatever. Anim keffiyeh carles cardigan. Velit seitan mcsweeney's photo booth 3
+							wolf moon irure. Cosby sweater lomo jean shorts, williamsburg hoodie minim qui you probably haven't heard of
+							them et cardigan trust fund culpa biodiesel wes anderson aesthetic. Nihil tattooed accusamus, cred irony
+							biodiesel keffiyeh artisan ullamco consequat.</p>
+						<p>Ad leggings keytar, brunch id art party dolor labore. Pitchfork yr enim lo-fi before they sold out qui. Tumblr
+							farm-to-table bicycle rights whatever. Anim keffiyeh carles cardigan. Velit seitan mcsweeney's photo booth 3
+							wolf moon irure. Cosby sweater lomo jean shorts, williamsburg hoodie minim qui you probably haven't heard of
+							them et cardigan trust fund culpa biodiesel wes anderson aesthetic. Nihil tattooed accusamus, cred irony
+							biodiesel keffiyeh artisan ullamco consequat.</p>
+					</div>
+				</div>
+				<!-- 
+					如果有两个相同的监听对象的话，监听事件都是生效的，但是点击链接的效果只有靠前的生效
+				 -->
+				<div class="col-sm-6" style="height: 280px;overflow-y: scroll; border: 1px #0074E8 solid;" data-spy="scroll" data-target="#nav1" data-offset="1">
+					<div id="one" style="border: 1px #12BC00 solid;">
+						<h3 style="border: 1px #12BC00 solid;">#one</h3>
+				
+						<p>Ad leggings keytar, brunch id art party dolor labore. Pitchfork yr enim lo-fi before they sold out qui. Tumblr
+							farm-to-table bicycle rights whatever. Anim keffiyeh carles cardigan. Velit seitan mcsweeney's photo booth 3
+							wolf moon irure. Cosby sweater lomo jean shorts, williamsburg hoodie minim qui you probably haven't heard of
+							them et cardigan trust fund culpa biodiesel wes anderson aesthetic. Nihil tattooed accusamus, cred irony
+							biodiesel keffiyeh artisan ullamco consequat.</p>
+						<p>Ad leggings keytar, brunch id art party dolor labore. Pitchfork yr enim lo-fi before they sold out qui. Tumblr
+							farm-to-table bicycle rights whatever. Anim keffiyeh carles cardigan. Velit seitan mcsweeney's photo booth 3
+							wolf moon irure. Cosby sweater lomo jean shorts, williamsburg hoodie minim qui you probably haven't heard of
+							them et cardigan trust fund culpa biodiesel wes anderson aesthetic. Nihil tattooed accusamus, cred irony
+							biodiesel keffiyeh artisan ullamco consequat.</p>
+					</div>
+					<div id="two">
+						<h3>#two</h3>
+						<p>Ad leggings keytar, brunch id art party dolor labore. Pitchfork yr enim lo-fi before they sold out qui. Tumblr
+							farm-to-table bicycle rights whatever. Anim keffiyeh carles cardigan. Velit seitan mcsweeney's photo booth 3
+							wolf moon irure. Cosby sweater lomo jean shorts, williamsburg hoodie minim qui you probably haven't heard of
+							them et cardigan trust fund culpa biodiesel wes anderson aesthetic. Nihil tattooed accusamus, cred irony
+							biodiesel keffiyeh artisan ullamco consequat.</p>
+						<p>Ad leggings keytar, brunch id art party dolor labore. Pitchfork yr enim lo-fi before they sold out qui. Tumblr
+							farm-to-table bicycle rights whatever. Anim keffiyeh carles cardigan. Velit seitan mcsweeney's photo booth 3
+							wolf moon irure. Cosby sweater lomo jean shorts, williamsburg hoodie minim qui you probably haven't heard of
+							them et cardigan trust fund culpa biodiesel wes anderson aesthetic. Nihil tattooed accusamus, cred irony
+							biodiesel keffiyeh artisan ullamco consequat.</p>
+					</div>
+					<div id="three">
+						<h3>#three</h3>
+						<p>Ad leggings keytar, brunch id art party dolor labore. Pitchfork yr enim lo-fi before they sold out qui. Tumblr
+							farm-to-table bicycle rights whatever. Anim keffiyeh carles cardigan. Velit seitan mcsweeney's photo booth 3
+							wolf moon irure. Cosby sweater lomo jean shorts, williamsburg hoodie minim qui you probably haven't heard of
+							them et cardigan trust fund culpa biodiesel wes anderson aesthetic. Nihil tattooed accusamus, cred irony
+							biodiesel keffiyeh artisan ullamco consequat.</p>
+						<p>Ad leggings keytar, brunch id art party dolor labore. Pitchfork yr enim lo-fi before they sold out qui. Tumblr
+							farm-to-table bicycle rights whatever. Anim keffiyeh carles cardigan. Velit seitan mcsweeney's photo booth 3
+							wolf moon irure. Cosby sweater lomo jean shorts, williamsburg hoodie minim qui you probably haven't heard of
+							them et cardigan trust fund culpa biodiesel wes anderson aesthetic. Nihil tattooed accusamus, cred irony
+							biodiesel keffiyeh artisan ullamco consequat.</p>
+					</div>
+				</div>
+			</div>
+			<!-- 
+				下拉框显示有bug，我还不知道怎么弄
+			 -->
+			<div class="row">
+				<h3>带下拉框的导航条</h3>
+				<div class="col-sm-8">
+					<nav class="navbar navbar-default" id="nav2">
+						<ul class="nav navbar-nav">
+							<li class="active"><a href="#fat">@fat</a></li>
+							<li><a href="#mdo">@mdo</a></li>
+							<li class="dropdown">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+									dropdown
+									<span class="caret"></span>
+								</a>
+								<ul class="dropdown-menu">
+									<li><a href="#one">one</a></li>
+									<li><a href="#two">two</a></li>
+									<li class="divider"></li>
+									<li><a href="#three">three</a></li>
+								</ul>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-8" style="height: 280px; overflow-y: scroll;" data-spy="scroll" data-target="#nav2" data-offset="0">
+					<h4 id="fat">@fat</h4>
+					<p>Ad leggings keytar, brunch id art party dolor labore. Pitchfork yr enim lo-fi before they sold out qui. Tumblr farm-to-table bicycle rights whatever. Anim keffiyeh carles cardigan. Velit seitan mcsweeney's photo booth 3 wolf moon irure. Cosby sweater lomo jean shorts, williamsburg hoodie minim qui you probably haven't heard of them et cardigan trust fund culpa biodiesel wes anderson aesthetic. Nihil tattooed accusamus, cred irony biodiesel keffiyeh artisan ullamco consequat.</p>
+					<h4 id="mdo">@mdo</h4>
+					<p>Veniam marfa mustache skateboard, adipisicing fugiat velit pitchfork beard. Freegan beard aliqua cupidatat mcsweeney's vero. Cupidatat four loko nisi, ea helvetica nulla carles. Tattooed cosby sweater food truck, mcsweeney's quis non freegan vinyl. Lo-fi wes anderson +1 sartorial. Carles non aesthetic exercitation quis gentrify. Brooklyn adipisicing craft beer vice keytar deserunt.</p>
+					<h4 id="one">one</h4>
+					<p>Occaecat commodo aliqua delectus. Fap craft beer deserunt skateboard ea. Lomo bicycle rights adipisicing banh mi, velit ea sunt next level locavore single-origin coffee in magna veniam. High life id vinyl, echo park consequat quis aliquip banh mi pitchfork. Vero VHS est adipisicing. Consectetur nisi DIY minim messenger bag. Cred ex in, sustainable delectus consectetur fanny pack iphone.</p>
+					<h4 id="two">two</h4>
+					<p>In incididunt echo park, officia deserunt mcsweeney's proident master cleanse thundercats sapiente veniam. Excepteur VHS elit, proident shoreditch +1 biodiesel laborum craft beer. Single-origin coffee wayfarers irure four loko, cupidatat terry richardson master cleanse. Assumenda you probably haven't heard of them art party fanny pack, tattooed nulla cardigan tempor ad. Proident wolf nesciunt sartorial keffiyeh eu banh mi sustainable. Elit wolf voluptate, lo-fi ea portland before they sold out four loko. Locavore enim nostrud mlkshk brooklyn nesciunt.</p>
+					<h4 id="three">three</h4>
+					<p>Ad leggings keytar, brunch id art party dolor labore. Pitchfork yr enim lo-fi before they sold out qui. Tumblr farm-to-table bicycle rights whatever. Anim keffiyeh carles cardigan. Velit seitan mcsweeney's photo booth 3 wolf moon irure. Cosby sweater lomo jean shorts, williamsburg hoodie minim qui you probably haven't heard of them et cardigan trust fund culpa biodiesel wes anderson aesthetic. Nihil tattooed accusamus, cred irony biodiesel keffiyeh artisan ullamco consequat.
+
+Keytar twee blog, culpa messenger bag marfa whatever delectus food truck. Sapiente synth id assumenda. Locavore sed helvetica cliche irony, thundercats you probably haven't heard of them consequat hoodie gluten-free lo-fi fap aliquip. Labore elit placeat before they sold out, terry richardson proident brunch nesciunt quis cosby sweater pariatur keffiyeh ut helvetica artisan. Cardigan craft beer seitan readymade velit. VHS chambray laboris tempor veniam. Anim mollit minim commodo ullamco thundercats. </p>
+				</div>
+			</div>
+			<div class="row">
+				<h3>通过data属性调用</h3>
+				<div class="col-sm-6">
+					<p>1.指定被监听对象属性为</p>
+					<pre>data-spy="scroll"</pre>
+					<p>2.指定被监听对象目标组件为</p>
+					<pre>data-target="#navbar-example"</pre>
+				</div>
+			</div>
+			<div class="row">
+				<h3>通过JavaScript 调用</h3>
+				<div class="col-sm-6">
+					<p>在 CSS 中添加 position: relative; 之后，通过 JavaScript 代码启动滚动监听插件：</p>
+					<pre>$('body').scrollspy({ target: '#navbar-example' })</pre>
+				</div>
+				
+			</div>
+			<div class="row">
+				<h3>刷新方法</h3>
+				<div class="col-sm-6">
+					<p>当使用滚动监听插件的同时在 DOM 中添加或删除元素后，需要像下面这样调用此刷新（ refresh） 方法：</p>
+									<pre>$('[data-spy="scroll"]').each(function () {
+ var $spy = $(this).scrollspy('refresh')
+})</pre>
+				</div>
+				
+			</div>
+			<div class="row">
+				<h3>滚动参数偏移</h3>
+				<div class="col-sm-6">
+					<p>计算滚动位置时相对于顶部的偏移量（像素数）（默认值是10）</p>
+					<pre>data-offset="1"</pre>
+				</div>
+			</div>
+			<div class="row">
+				<h3>事件监听</h3>
+				<div class="col-sm-6">
+					<p>事件类型：activate.bs.scrollspy</p>
+					<p>描述：每当一个新条目被激活后都将由滚动监听插件触发此事件</p>
+					<pre>$('#myScrollspy').on('activate.bs.scrollspy', function () {
+  // do something…
+})</pre>
+				</div>
+			</div>
+			
+		</div>
+
+		<!-- Optional JavaScript -->
+		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+		<script src="js/jquery_1.11.1.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>

@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+	<link rel="stylesheet" type="text/css" href="css/index.css"/>
+    <title>Hello, world!</title>
+	<style type="text/css">
+		.row:first-child{
+			margin-top: 50px;
+		}
+	</style>
+  </head>
+  <body>
+	<!-- 辅助类讲述各种辅助工具，背景、对齐等等 -->
+    <div class="container">
+		<!-- 
+			bootstrap为文本添加了样式
+			为了使样式准确生效，应该用一个添加该样式属性的标签（如span）直接包裹文本
+			-->
+		<div class="row">
+			<h3>情境文本颜色</h3>
+			<div class="col-md-2">
+				<p class="text-muted">muted</p>
+			</div>
+			<div class="col-md-2">
+				<p class="text-primary">primary</p>
+			</div>
+			<div class="col-md-2">
+				<p class="text-success">success</p>
+			</div>
+			<div class="col-md-2">
+				<p class="text-info">info</p>
+			</div>
+			<div class="col-md-2">
+				<p class="text-warning">warning</p>
+			</div>
+			<div class="col-md-2">
+				<p class="text-danger">danger</p>
+			</div>
+		</div>
+		<hr >
+		<!-- bootstrap还添加了默认的背景色 -->
+		<div class="row">
+			
+			<h3>情境背景颜色</h3>
+			<div class="col-md-2">
+				<p class="bg-muted">muted</p>
+			</div>
+			<div class="col-md-2">
+				<p class="bg-primary">primary</p>
+			</div>
+			<div class="col-md-2">
+				<p class="bg-success">success</p>
+			</div>
+			<div class="col-md-2">
+				<p class="bg-info">info</p>
+			</div>
+			<div class="col-md-2">
+				<p class="bg-warning">warning</p>
+			</div>
+			<div class="col-md-2">
+				<p class="bg-danger">danger</p>
+			</div>
+		</div>
+		<hr >
+		<div class="row">
+			<!-- 通过使用一个象征关闭的图标，可以让模态框和警告框消失。 -->
+			<div class="col-sm-2">
+				<h4>关闭按钮:</h4>
+			</div>
+			<div class="col-sm-2 col-sm-pull-1 pull-left" style="margin-top: 1.2%;">
+				<button type="button" class="close pull-left" aria-label="Close" style=""><span aria-hidden="true">&times;</span></button>
+			</div>
+			<!-- 通过使用三角符号可以指示某个元素具有下拉菜单的功能（上拉菜单的箭头是反方向的） -->
+			<div class="col-sm-2">
+				<h4>三角符号:</h4>
+			</div>
+			<div class="col-sm-2 col-sm-pull-1"style="margin-top: 1.2%;">
+				<span class="caret"></span>
+			</div>
+		</div>
+		<hr >
+		<!-- 使用pull可以强制组件的浮动属性 -->
+		<!-- 请勿将该属性应用到有专属对齐方式的地方（如navbar具有navbar-left对齐方式） -->
+		<div class="row">
+			<h3>快速浮动</h3>
+			
+			<div class="col-md-4">
+				<div class="pull-right">Hello</div>
+			</div>
+			<div class="col-md-4">
+				<div class="pull-left">Hello</div>
+			</div>
+		</div>
+		<hr >
+		<!--
+			通过center-block属性为任意元素设置 display: block 属性并通过 margin 属性让其中的内容居中
+			原理为设置margin为auto
+			对于文本无效，请使用text-center属性代替
+			-->
+		<div class="row">
+			<h3>快速居中</h3>
+			
+			<div class="col-md-4">
+				<button class="btn btn-default center-block">Hello</button>
+			</div>
+		</div>
+		<hr >
+		<!-- 通过为父元素添加 .clearfix 类可以很容易地清除浮动 -->
+		<div class="row clearfix">
+			<h3>清除浮动</h3>
+			
+			<div class="col-md-6">
+				hello
+			</div>
+		</div>
+		<hr >
+		<!-- 
+			.show 和 .hidden 类可以强制任意元素显示或隐藏(对于屏幕阅读器也能起效)
+			另外，.invisible 类可以被用来仅仅影响元素的可见性，也就是说，元素的 display 属性不被改变，并且这个元素仍然能够影响文档流的排布
+		-->
+		<div class="row">
+			<h3>显示和隐藏内容</h3>
+			<div class="col-md-2 hidden">
+				hello
+			</div>
+			<div class="col-md-2 show">
+				hello
+			</div>
+		</div>
+		<hr >
+		<!-- 
+			.sr-only 类可以对屏幕阅读器以外的设备隐藏内容
+			.sr-only 和 .sr-only-focusable 联合使用的话可以在元素有焦点的时候再次显示出来（例如，使用键盘导航的用户）
+		 -->
+		<div class="row">
+			<h3>屏幕阅读器和键盘导航</h3>
+			<div class="col-md-2">
+				<a class="sr-only sr-only-focusable" href="#">Skip to main content</a>
+			</div>
+			<div class="col-md-6">
+				<p>前面的内容屏幕是看不见的，只对辅助程序有效</p>
+			</div>
+		</div>
+		<hr >
+		<!-- 使用 .text-hide 类可以用来将元素的文本内容替换为一张背景图。 -->
+		<div class="row">
+			<h3>文字替换为背景</h3>
+			<div class="col-md-6">
+				<h1 class="text-hide">Custom heading</h1>
+			</div>
+		</div>
+		<hr >
+	</div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="js/jquery_1.11.1.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
+  </body>
+</html>
